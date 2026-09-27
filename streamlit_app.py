@@ -7,20 +7,18 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-
 BASE_DIR = Path(__file__).resolve().parent
-ARTIFACTS_DIR = BASE_DIR / "artifacts"
 
 model = joblib.load(
-    ARTIFACTS_DIR / "lightgbm_air_quality_model.joblib"
+    BASE_DIR / "lightgbm_air_quality_model.joblib"
 )
 
 preprocessor = joblib.load(
-    ARTIFACTS_DIR / "preprocessor.joblib"
+    BASE_DIR / "preprocessor.joblib"
 )
 
 metadata = joblib.load(
-    ARTIFACTS_DIR / "metadata.joblib"
+    BASE_DIR / "metadata.joblib"
 )
 
 
